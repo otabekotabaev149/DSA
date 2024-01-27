@@ -1,6 +1,9 @@
+import java.util.HashMap;
+
 public class MiddleNode {
     public static void main(String[] args) {
-
+        HashMap map = new HashMap();
+        map.containsKey("s");
     }
 
     public static ListNode middleNode(ListNode head) {
