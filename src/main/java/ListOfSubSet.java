@@ -4,6 +4,7 @@ import java.util.List;
 public class ListOfSubSet {
     public static void main(String[] args) {
 //        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
+
     }
 
     public static List<List<Integer>> subsets(int[] arr) {
