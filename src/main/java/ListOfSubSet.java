@@ -1,16 +1,18 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ListOfSubSet {
     public static void main(String[] args) {
 //        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
 
-
-
     }
 
     public static List<List<Integer>> subsets(int[] arr) {
         List<List<Integer>> list = new ArrayList<>();
+        list.stream().forEach(e -> {
+
+        });
         int len = arr.length;
         for(int i=0;i< (1<<len);i++){
             List<Integer> l = new ArrayList<>();
