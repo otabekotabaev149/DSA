@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class ListOfSubSet {
@@ -10,9 +9,7 @@ public class ListOfSubSet {
 
     public static List<List<Integer>> subsets(int[] arr) {
         List<List<Integer>> list = new ArrayList<>();
-        list.stream().forEach(e -> {
 
-        });
         int len = arr.length;
         for(int i=0;i< (1<<len);i++){
             List<Integer> l = new ArrayList<>();
