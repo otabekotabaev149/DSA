@@ -8,10 +8,11 @@ public class MaxMeetings {
     }
 
     public static int maxMeetings(int start[], int end[], int n) {
+        int len = start.length;
         int lastEnd = -1;
         int res = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = i+1; j < n; j++) {
+        for (int i = 0; i < len; i++) {
+            for (int j = i+1; j < len; j++) {
                 if(end[i] > end[j]){
                     int temp = start[i];
                     start[i] = start[j];
