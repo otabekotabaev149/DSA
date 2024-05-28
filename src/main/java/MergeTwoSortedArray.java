@@ -20,19 +20,15 @@ public class MergeTwoSortedArray {
             }
             len--;
         }
-        if(m >= 0){
-            while(m >= 0){
-                arr1[len] = arr1[m];
-                len--;
-                m--;
-            }
+        while(m >= 0){
+            arr1[len] = arr1[m];
+            len--;
+            m--;
         }
-        else if(n >= 0){
-            while(n >= 0){
-                arr1[len] = arr2[n];
-                len--;
-                n--;
-            }
+        while(n >= 0){
+            arr1[len] = arr2[n];
+            len--;
+            n--;
         }
         for(int lk : arr1){
             System.out.print(lk + " ");
