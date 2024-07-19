@@ -1,11 +1,22 @@
 public class MergeTwoSortedArray {
     public static void main(String[] args) {
-        int arr1[] = {1,2,3,0,0,0};
-        int arr2[] = {2,5,6};
+
+
+        int arr1[] = {1, 2, 3, 0, 0, 0};
+
+        int arr2[] = {2, 5, 6};
+
+//        nums1 = {2, 5, 6, 0, 5, 6}
+
+//        nums2 = {1, 2, 3}
+
+
         merge(arr1, 3, arr2, 3);
+
+
     }
 
-    public void merge2(int[] nums1, int m, int[] nums2, int n) {
+    private void merge2(int[] nums1, int m, int[] nums2, int n) {
         int len = m + n - 1; // Pointer for the last position in nums1
         m--; // Pointer for the last element in the initial part of nums1
         n--; // Pointer for the last element in nums2
