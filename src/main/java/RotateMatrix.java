@@ -2,32 +2,27 @@ import java.util.Arrays;
 
 public class RotateMatrix {
     public static void main(String[] args) {
-        int[][] mat = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        for(int[] i : mat){
-            System.out.println(Arrays.toString(i));
-        }
-        System.out.println();
-        // Rotate Matrix
-        new RotateMatrix().rotate(mat);
-        for(int[] i : mat){
-            System.out.println(Arrays.toString(i));
-        }
+
     }
 
-    private void rotate(int[][] matrix) {
-        int len = matrix.length;
-        int[][] mat = new int[len][len];
-        for(int i=0;i<len;i++){
-            for(int j=0;j<len;j++){
-                mat[i][j] = matrix[i][j];
+    private void rotate(int[][] matrix){
+        int row = matrix.length;
+        int col = matrix[0].length;
+
+        for(int i=0;i<row;i++){
+            for(int j=i;j<col;j++){
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
             }
         }
-        int l = len-1;
-        for(int i=0;i<len;i++){
-            for(int j=0;j<len;j++){
-                matrix[j][l] = mat[i][j];
+
+        for(int i=0;i<row;i++){
+            for(int j=0;j<row/2;j++){
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[i][row-1-j];
+                matrix[i][row-1-j] = temp;
             }
-            l--;
         }
     }
 }
