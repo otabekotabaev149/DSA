@@ -4,32 +4,20 @@ public class BestTimeToSellStock {
         System.out.println(maxProfit(arr));
     }
 
-    private static int maxProfit(int[] arr) {
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE, lastMin=0, lastMax=0;
-        for(int i=0;i<arr.length;i++){
-            if (min > arr[i]){
-                lastMin = min;
-                min = arr[i];
-                lastMax = max;
-                max = arr[i];
+    private static int maxProfit(int[] prices) {
+        int minprice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for(int i=0; i < prices.length; i++)
+        {
+            if(prices[i] < minprice)
+            {
+                minprice = prices[i];
             }
-            if(max < arr[i]){
-                lastMax = max;
-                max = arr[i];
-            }
+            else if( prices[i] - minprice > maxProfit)
+                maxProfit = prices[i] - minprice;
         }
-        if(max > min){
-            return max-min;
-        }
-        else{
-            if(lastMin < max){
-                return max-lastMin;
-            }
-            else if(lastMin < lastMax){
-                return lastMax - lastMin;
-            }
-            return 0;
-        }
+
+        return maxProfit;
     }
 }
